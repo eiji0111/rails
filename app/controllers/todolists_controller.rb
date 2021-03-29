@@ -1,5 +1,4 @@
 class TodolistsController < ApplicationController
-
   def new
     @list = List.new
   end
@@ -35,6 +34,7 @@ class TodolistsController < ApplicationController
   end
 
   private
+
   def list_params
     params.require(:list).permit(:title, :body, :image)
   end
